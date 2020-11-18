@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    background: lightgrey;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    /* grid-column-gap: 10px; */
+}
+
+.container>nav {
+    background: white;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-rows: 1fr 8fr 0.5fr;
+    grid-row-gap: 10px;
+}
+
+.dashboard header, footer {
+    background: white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 10px;
+}
+
+main>* {
+    background: white;
+}

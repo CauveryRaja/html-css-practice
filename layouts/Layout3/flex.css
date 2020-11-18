@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+nav {
+    flex: 1;
+    background-color: grey;
+}
+
+.dashboard {
+    flex: 8;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+}
+
+header {
+    flex: 1;
+    background-color: white;
+}
+
+main {
+    flex: 10;
+    display: flex;
+}
+
+footer {
+    flex: 0.5;
+    background-color: white;
+}
+
+main .left-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main .left-panel .row1 {
+    flex: 1;
+    display: flex;
+}
+
+main .left-panel .row1>* {
+    flex: 1;
+    background-color: white;
+    margin: 1%;
+}
+
+main .left-panel .row2 {
+    flex: 2;
+    display: flex;
+}
+
+main .left-panel .row2>* {
+    background-color: white;
+    flex: 1;
+    margin: 1%;
+}
+
+main .right-panel {
+    flex: 2;
+    height: 100%;
+}
+
+main .right-panel .row1 {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+main .right-panel .row1>* {
+    flex: 200px;
+    background-color: white;
+    margin: 1%;
+}

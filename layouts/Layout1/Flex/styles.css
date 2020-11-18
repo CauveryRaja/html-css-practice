@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+aside {
+    flex-basis: 200px;
+    height: 100%;
+    background-color: grey;
+}
+
+main {
+    flex: auto;
+    height: 100%;
+    background-color: lightgray;
+}

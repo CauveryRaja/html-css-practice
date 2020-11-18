@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Using Grid */
+/* .container {
+    display: grid;
+    grid-template-columns: 300px auto;
+    height: 100%;
+}
+
+nav {
+    background-color: grey;
+}
+
+.dashboard {
+    background-color: lightgray;
+} */
+
+/* Using Flex */
+/* .container {
+    display: flex;
+    height: 100%;
+}
+
+nav {
+    flex-basis: 300px;
+    background-color: grey;
+}
+
+.dashboard {
+    flex: auto;
+    background-color: lightgray;
+} */
+
+/* Using Floats */
+/* .container {
+    height: 100%;
+}
+
+nav {
+    float: left;
+    width: 300px;
+    background-color: grey;
+    height: 100%;
+}
+
+.dashboard {
+    width: calc(100% - 300px);
+    float: left;
+    background-color: lightgray;
+    height: 100%;
+} */
+
+/* Using Inline blocks */
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+    background-color: grey;
+    height: 100%;
+}
+
+.dashboard {
+    display: inline-block;
+    width: calc(100% - 304px);
+    /* vertical-align: top; */
+    background-color: lightgray;
+    height: 100%;
+}
