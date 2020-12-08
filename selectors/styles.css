@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+[id="boxId"] {
+    background-color: lightgray;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 5px;
+}
+
+.box:nth-of-type(3n) {
+    background-color: greenyellow;
+}
+
+
+/* Specificity increases with Weight shown in VSCode tooltip
+body div {
+    background-color: lightgreen;
+}
+
+div {
+    background-color: green;
+} */

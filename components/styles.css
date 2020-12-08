@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: gray;
+}
+
+nav a {
+    padding: 15px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    background-color: rgb(43, 38, 38);
+}
+
+.sub-menu {
+    display: none;
+}
+
+nav a:hover + .sub-menu {
+    display: block;
+}

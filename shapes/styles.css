@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container * {
+    margin: 1em;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    /* border-radius: 50%; */
+    clip-path: circle();
+    shape-outside: circle();
+}
+
+.triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 60px solid grey;
+}
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-top: 60px solid grey;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+}
+
+.triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 60px solid grey;
+}
+
+.triangle-right {
+    width: 0;
+    height: 0;
+    border-left: 60px solid gray;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+}
+
+.triangle-left-bottom {
+    width: 0;
+    height: 0;
+    border-right: 40px solid transparent;
+    border-bottom: 80px solid grey;
+}
+
+.trapezium {
+    width: 70px;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 70px solid gray;
+}
