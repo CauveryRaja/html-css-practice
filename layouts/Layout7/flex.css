@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+nav {
+    flex: 1;
+    background-color: gray;
+}
+
+.dashboard {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    flex: 1;
+    background-color: lightgray;
+}
+
+main {
+    flex: 8;
+    margin: 10px 0;
+    display: flex;
+}
+
+.panel-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-right {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.panel-left > * , .panel-right > * {
+    flex: 1;
+    margin: 5px;
+    background-color: lightgray;
+}
