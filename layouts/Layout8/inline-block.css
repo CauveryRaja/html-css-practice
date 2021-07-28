@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    width: 20%;
+    height: 100%;
+    display: inline-block;
+    background-color: gray;
+}
+
+section.dashboard {
+    width: 79%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top; 
+}
+
+header, footer {
+    height: 10%;
+    background-color: lightgray;
+}
+
+main {
+    height: 78%;
+    margin: 1% 0;
+}
+
+.left-panel, .right-panel {
+    width: 49%;
+    height: 100%;
+    display: inline-block;
+}
+
+.left-panel {
+    vertical-align: top;
+}
+
+.left-panel>* {
+    width: 47%;
+    height: 100%;
+    margin: 0 1%;
+    display: inline-block;
+    background-color: lightgray;
+}
+
+.right-panel>* {
+    height: 32%;
+    margin: 1% 0;
+    background-color: lightgray;
+}
