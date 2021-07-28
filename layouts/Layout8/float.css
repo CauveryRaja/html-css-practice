@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-color: gray;
+}
+
+section.dashboard {
+    width: 80%;
+    height: 100%;
+    float: left;
+}
+
+header, footer {
+    height: 10%;
+    background-color: lightgray;
+}
+
+main {
+    height: 78%;
+    margin: 1% 0;
+}
+
+.left-panel, .right-panel {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.left-panel>* {
+    width: 47%;
+    height: 100%;
+    margin: 0 1%;
+    float: left;
+    background-color: lightgray;
+}
+
+.right-panel>* {
+    height: 33%;
+    background-color: lightgray;
+}
+
+.right-panel>*:not(:first-child) {
+    margin: 1% 0;
+}
