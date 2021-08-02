@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+nav {
+    flex: 2;
+    background-color: gray;
+}
+
+.dashboard {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    flex: 1;
+    background-color: lightgray;
+}
+
+main {
+    flex: 6;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+}
+
+.left-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-panel>* {
+    flex: 1;
+    margin-right: 10px;
+    background-color: lightgray;
+}
+
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-panel>* {
+    flex: 1;
+    background-color: lightgray;
+}
+
+.right-panel>*:not(:last-child) {
+    margin-bottom: 10px;
+}
