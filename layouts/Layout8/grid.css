@@ -32,6 +32,9 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+    /* Since gap is applied between grid elements,
+    adding horizontal margin looks better */
+    margin: 0 10px;
 }
 
 .left-panel {
