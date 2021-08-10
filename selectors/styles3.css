@@ -1,9 +1,21 @@
-
 .box {
+    width: 100px;
+    height: 100px;
+}
+
+/* .box {
     background-color: gray;
 }
 
-body #boxId {
+[aria-label="box"] {
+    background-color: black;
+} */
+
+.box:nth-of-type(even) {
+    background-color: gray;
+}
+
+/* body #boxId {
     background-color: orange;
 }
 
@@ -13,4 +25,4 @@ body #boxId {
 
 * {
     background-color: brown;
-}
+} */
