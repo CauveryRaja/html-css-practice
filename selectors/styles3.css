@@ -1,0 +1,16 @@
+
+.box {
+    background-color: gray;
+}
+
+body #boxId {
+    background-color: orange;
+}
+
+#boxId {
+    background-color: red;
+}
+
+* {
+    background-color: brown;
+}
