@@ -21,3 +21,32 @@
     top: 30px;
     left: 30px;
 }
+
+.absolute-pos {
+    background-color: lightgreen;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.fixed-pos {
+    background-color: lightpink;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 200px;
+    left: 50px;
+}
+
+.sticky-pos {
+    background-color: lightskyblue;
+    width: 100px;
+    height: 100px;
+    position: sticky;
+    top: 50px;
+    left: 50px;
+    /* Right property does not work, because its affected by scroll
+    right: 500px; */
+}
