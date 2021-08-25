@@ -47,6 +47,6 @@
     position: sticky;
     top: 50px;
     left: 50px;
-    /* Right property does not work, because its affected by scroll
+    /* Right property does not work, because its not affected by scroll
     right: 500px; */
 }
