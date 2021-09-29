@@ -6,18 +6,28 @@
 
 .container {
     display: flex;
+    gap: 10px;
 }
 
 .item {
     width: 200px;
     height: 200px;
+    /* order: 0; */
+    flex-grow: 2;
     background-color: grey;
-    margin: 5px;
+}
+
+.mediumItem {
+    width: 150px;
+    height: 150px;
+    /* order: 0; */
+    flex-grow: 1;
+    background-color: grey;
 }
 
 .smallItem {
     width: 100px;
     height: 100px;
+    /* order: 1; */
     background-color: grey;
-    margin: 5px;
 }
