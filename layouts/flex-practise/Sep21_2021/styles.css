@@ -10,24 +10,28 @@
 }
 
 .item {
-    width: 200px;
-    height: 200px;
+    /* width: 200px; */
+    height: 400px;
     /* order: 0; */
-    flex-grow: 2;
+    /* flex-grow: 2; */
+    /* flex-shrink: 4; */
+    flex-basis: 400px;
     background-color: grey;
 }
 
 .mediumItem {
-    width: 150px;
+    /* width: 150px; */
     height: 150px;
     /* order: 0; */
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    flex: auto;
     background-color: grey;
 }
 
 .smallItem {
-    width: 100px;
+    /* width: 100px; */
     height: 100px;
     /* order: 1; */
+    flex: auto;
     background-color: grey;
 }
