@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    background: chocolate;
+}
+
+.inline {
+    width: 100px;
+    height: 100px;
+    background: goldenrod;
+    display: inline;
+}
+
+.inline-block {
+    width: 100px;
+    height: 100px;
+    background: grey;
+    display: inline-block;
+}
