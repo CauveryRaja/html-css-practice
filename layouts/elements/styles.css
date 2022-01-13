@@ -36,27 +36,3 @@ body {
     width: 20px;
     background-color: orange;
 }
-
-.flex-container {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    /* align-content: flex-start;
-    height: 500px; */
-    gap: 10px;
-    padding: 10px;
-    background-color: maroon;
-}
-
-.flex-item {
-    width: 100px;
-    height: 100px;
-    /* margin: 10px; */
-    background-color: lightgray;
-}
-
-.small {
-    width: 50px;
-    height: 50px;
-}
