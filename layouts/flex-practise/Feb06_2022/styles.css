@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.small {
+    width: 100px;
+    height: 100px;
+    flex-grow: 2;
+    background-color: lightblue;
+}
+
+.medium {
+    width: 200px;
+    height: 200px;
+    background-color: antiquewhite;
+}
+
+.large {
+    width: 300px;
+    height: 300px;
+    background-color: lightgrey;
+}
