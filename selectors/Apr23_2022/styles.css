@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div {
+    background-color: lightgray;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+/* html body #first {
+    background-color: red;
+}
+
+div#first {
+    background-color: bisque;
+}
+
+#first {
+    background-color: azure;
+} */
+
+div:nth-child(1) {
+    background-color: blue;
+}
+
+div:nth-of-type(1) {
+    background-color: aqua;
+}
+
+/* [aria-disabled="true"] {
+    background-color: bisque;
+}
+
+.active {
+    background-color:aquamarine;
+} */
