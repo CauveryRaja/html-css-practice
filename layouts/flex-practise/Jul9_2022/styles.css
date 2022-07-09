@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+.box {
+    background-color: lightgray;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
