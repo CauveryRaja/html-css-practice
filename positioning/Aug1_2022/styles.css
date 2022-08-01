@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    display: flex;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    background-color: lightgray;
+}
+
+.fixed {
+    position: fixed;
+    top: 30px;
+    background-color: aquamarine;
+}
