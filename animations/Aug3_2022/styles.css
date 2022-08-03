@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+}
+
+.relative {
+    position: relative;
+    left: 0px;
+    animation: layoutAnimation 5s linear 0s infinite;
+}
+
+@keyframes layoutAnimation {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.transform {
+    transform: translateX(0%);
+    animation: compositeAnimation 5s linear 0s infinite;
+}
+
+@keyframes compositeAnimation {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(900%);
+    }
+}
