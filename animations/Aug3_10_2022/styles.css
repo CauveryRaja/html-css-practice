@@ -8,12 +8,13 @@
     width: 100px;
     height: 100px;
     background-color: lightgray;
+    margin: 10px;
 }
 
 .relative {
     position: relative;
     left: 0px;
-    animation: layoutAnimation 5s linear 0s infinite;
+    animation: layoutAnimation 10s linear 0s infinite;
 }
 
 @keyframes layoutAnimation {
@@ -27,7 +28,7 @@
 
 .transform {
     transform: translateX(0%);
-    animation: compositeAnimation 5s linear 0s infinite;
+    animation: compositeAnimation 10s linear 0s infinite;
 }
 
 @keyframes compositeAnimation {
@@ -35,6 +36,6 @@
         transform: translateX(0%);
     }
     100% {
-        transform: translateX(900%);
+        transform: translateX(100vw);
     }
 }
