@@ -39,3 +39,18 @@
         transform: translateX(100vw);
     }
 }
+
+/* Janky animations */
+.absolute {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    animation: move 3s ease infinite;
+}
+
+@keyframes move {
+    50% {
+        top: calc(90vh - 160px);
+        left: calc(90vw - 200px);
+    }
+}
