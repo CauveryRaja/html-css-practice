@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixing janky animations</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            position: relative;
+            animation: layoutAnimation 5s infinite alternate;
+        }
+
+        @keyframes layoutAnimation {
+            0% {
+                left: 0px;
+            }
+            100% {
+                left: calc(100% - 100px);
+            }
+        }
+
+        /* If used this, there won't be any jankness */
+        @keyframes compositeAnimation {
+            0% {
+                transform: translate(0);
+            }
+            100% {
+                transform: translate(500%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script src="app.js"></script>
+</body>
+</html>
