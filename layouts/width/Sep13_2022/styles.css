@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: gray;
+
+
+    margin: 0 20%;
+}
+
+.wrapper button {
+    /* flex: 1 0 auto; */
+    font-size: 20px;
+    padding: 10px 50px;
+
+
+    flex: 1;
+    white-space: nowrap;
+}
