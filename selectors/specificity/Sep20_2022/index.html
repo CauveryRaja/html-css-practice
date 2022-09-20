@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS specificity</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #user {
+            background-color: aquamarine;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: rosybrown;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="user"></div>
+</body>
+</html>
