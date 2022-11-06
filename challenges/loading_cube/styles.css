@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+   --size: 200px;
+}
+
+.cube {
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+
+    perspective: 600px;
+    transform-style: preserve-3d;
+}
+
+.cube-face {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    background-color: red;
+    opacity: 0.5;
+}
+
+.cube-front {
+    background-color: blue;
+    transform: translate3d(0, 0, var(--size)/2);
+}
+
+.cube-back {
+    transform: rotateY(180deg) translate3d(0, 0, var(--size)/2);
+}
