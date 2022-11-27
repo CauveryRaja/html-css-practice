@@ -8,8 +8,18 @@
    --size: 200px;
 }
 
+.container {
+    background: rgb(66, 77, 78);
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .scene {
-    margin: 100px;
+    margin: 150px auto;
     width: var(--size);
     height: var(--size);
 
@@ -29,36 +39,66 @@
     position: absolute;
     width: var(--size);
     height: var(--size);
-    background-color: red;
-    opacity: 0.5;
 }
 
 .cube-front {
-    background-color: blue;
+    background-color: rgba(0, 0, 0, 0.3);
     transform: translate3d(0, 0, 100px);
 }
 
 .cube-back {
-    background-color: green;
+    background-color: rgba(0,0,0,0.3);
     transform: rotateY(180deg) translate3d(0, 0, 100px);
 }
 
 .cube-left {
-    background-color: lightblue;
+    background-color: rgba(0,0,0,0.3);
     transform: rotateY(-90deg) translate3d(0, 0, 100px);
 }
 
 .cube-right {
-    background-color: grey;
+    background-color: rgba(0,0,0,0.3);
     transform: rotateY(90deg) translate3d(0, 0, 100px);
 }
 
 .cube-top {
-    background-color: goldenrod;
-    transform: rotateX(-90deg) translate3d(0, 0, 100px);
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: rotateX(90deg) translate3d(0, 0, 100px);
 }
 
 .cube-bottom {
-    background-color: maroon;
-    transform: rotateX(90deg) translate3d(0, 0, 100px);
+    background-color: rgba(0,0,0,0.3);
+    transform: rotateX(-90deg) translate3d(0, 0, 100px);
+}
+
+.cube-front::before, .cube-left::before, .cube-back::before,
+.cube-right::before, .cube-bottom::before {
+    display: block;
+    content: '';
+    background-color: rgba(22, 184, 229, 0.861);
+
+    transform-origin: 50% 100%;
+    height: 200px;
+
+
+    /* Alternative to height */
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; */
+}
+
+.cube-front::before, .cube-left::before, .cube-back::before,
+.cube-right::before {
+    animation: grow 5s infinite alternate;
+}
+
+@keyframes grow {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
 }
