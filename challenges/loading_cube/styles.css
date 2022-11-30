@@ -10,8 +10,8 @@
 
 .container {
     background: rgb(66, 77, 78);
-    width: 600px;
-    height: 500px;
+    width: 700px;
+    height: 600px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -19,7 +19,7 @@
 }
 
 .scene {
-    margin: 150px auto;
+    margin: 180px auto;
     width: var(--size);
     height: var(--size);
 
@@ -31,8 +31,11 @@
     width: var(--size);
     height: var(--size);
 
+    cursor: pointer;
+    transition: transform 1s;
+
     transform-style: preserve-3d;
-    transform: rotateY(45deg);
+    transform: rotateX(-20deg) rotateY(45deg);
 }
 
 .cube-face {
@@ -101,4 +104,8 @@
     100% {
         transform: scaleY(1);
     }
+}
+
+.cube:hover {
+    transform: translateY(-20px);
 }
