@@ -72,13 +72,15 @@ html, body {
 
 @keyframes sun-rise-set {
     0% {
-        transform: rotate(0);
+        transform: rotate(-90deg);
+        background-color: rgb(250, 86, 9);
     }
     50% {
-        transform: rotate(180deg);
+        background-color: rgb(253, 196, 7);
     }
     100% {
-        transform: rotate(360deg);
+        transform: rotate(90deg);
+        background-color: rgb(250, 86, 9);
     }
 }
 
