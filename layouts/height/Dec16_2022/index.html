@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height allocation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            background-color: lightgray;
+        }
+
+        .image {
+            height: 100px;
+            background-color: aquamarine;
+            /* flex: content; */
+        }
+
+        .content {
+            flex: 1 0 auto;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image">image</div>
+        <div class="content">content</div>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sint rerum ducimus repellendus beatae doloremque. Voluptatum, eius similique quasi deserunt ipsa adipisci numquam sequi fugit non nostrum praesentium enim fuga odit rem accusantium beatae rerum, nihil quas repudiandae distinctio autem molestiae ducimus aperiam! Eos consectetur tempore dolorem, illo libero eum repellendus, odio earum ullam molestias doloremque illum ut voluptate recusandae porro. Voluptates quos obcaecati quo sed temporibus quas ut eaque accusamus repellendus accusantium, neque consequatur, eum illo. Eaque, placeat tenetur.
+    </div>
+</body>
+</html>

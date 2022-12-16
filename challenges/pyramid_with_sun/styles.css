@@ -21,6 +21,8 @@ html, body {
     position: relative;
     z-index: 1;
     overflow: hidden;
+
+    animation: sky-light-dark 4s linear infinite;
     /* position: absolute;
     top: 50%;
     left: 50%;
@@ -77,5 +79,17 @@ html, body {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes sky-light-dark {
+    0% {
+        background-color: rgb(40, 40, 40);
+    }
+    50% {
+        background-color: rgb(61, 232, 251);
+    }
+    100% {
+        background-color: rgb(40, 40, 40);
     }
 }
