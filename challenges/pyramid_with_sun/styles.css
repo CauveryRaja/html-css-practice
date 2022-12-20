@@ -16,7 +16,7 @@ html, body {
 .container {
     width: 250px;
     height: 250px;
-    background-color: rgb(61, 232, 251);
+    background-color: rgb(16, 225, 253);
     border-radius: 50%;
     position: relative;
     z-index: 1;
@@ -32,7 +32,7 @@ html, body {
 .ground {
     width: 250px;
     height: 70px;
-    background-color: rgb(251, 218, 5);
+    background-color: rgba(251, 222, 5);
     position: absolute;
     bottom: 0;
 }
@@ -46,6 +46,8 @@ html, body {
     border-left-color: transparent;
     border-right-color: transparent;
     border-top-color: transparent;
+
+    animation: pyramid-color 4s linear infinite;
 }
 
 .pyramid::after {
@@ -55,6 +57,18 @@ html, body {
     border-right-color: transparent;
     border-top-color: transparent;
     transform: skew(15deg) translateX(10px);
+    animation: pyramid-color-2 4s linear infinite;
+}
+
+.pyramid::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    border: 20px solid gray;
+    opacity: 0.5;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
 }
 
 .sun {
@@ -73,25 +87,45 @@ html, body {
 @keyframes sun-rise-set {
     0% {
         transform: rotate(-90deg);
-        background-color: rgb(250, 86, 9);
+        background-color: rgb(253, 175, 67);
     }
-    50% {
-        background-color: rgb(253, 196, 7);
+    50%, 70% {
+        background-color: rgb(253, 245, 7);
     }
     100% {
         transform: rotate(90deg);
-        background-color: rgb(250, 86, 9);
+        background-color: rgb(253, 175, 67);
     }
 }
 
 @keyframes sky-light-dark {
     0% {
-        background-color: rgb(40, 40, 40);
+        opacity: 0;
     }
-    50% {
-        background-color: rgb(61, 232, 251);
+    30%, 50%, 80% {
+        opacity: 1;
     }
     100% {
-        background-color: rgb(40, 40, 40);
+        opacity: 0;
+    }
+}
+
+@keyframes pyramid-color {
+    0%, 50% {
+        border-bottom-color: rgb(251, 245, 229);
+    }
+    75%, 100% {
+        border-bottom-color: rgb(247, 224, 164);
+    }
+}
+
+@keyframes pyramid-color-2 {
+    0%, 50% {
+        border-left-color: rgb(247, 224, 164);
+        border-bottom-color: rgb(247, 224, 164);
+    }
+    75%, 100% {
+        border-left-color: rgb(251, 245, 229);
+        border-bottom-color: rgb(251, 245, 229);
     }
 }
