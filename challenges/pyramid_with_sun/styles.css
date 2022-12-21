@@ -22,7 +22,7 @@ html, body {
     z-index: 1;
     overflow: hidden;
 
-    animation: sky-light-dark 4s linear infinite;
+    animation: sky-light-dark 5s linear infinite;
     /* position: absolute;
     top: 50%;
     left: 50%;
@@ -47,7 +47,7 @@ html, body {
     border-right-color: transparent;
     border-top-color: transparent;
 
-    animation: pyramid-color 4s linear infinite;
+    animation: pyramid-color 5s linear infinite;
 }
 
 .pyramid::after {
@@ -57,31 +57,34 @@ html, body {
     border-right-color: transparent;
     border-top-color: transparent;
     transform: skew(15deg) translateX(10px);
-    animation: pyramid-color-2 4s linear infinite;
+    animation: pyramid-color-2 5s linear infinite;
 }
 
-.pyramid::before {
-    content: '';
+.shadow {
     position: absolute;
     bottom: 0;
-    border: 20px solid gray;
-    opacity: 0.5;
+    left: 50%;
+    transform: translate(-50%, 55%) scaleY(0.4) skew(20deg);
+    border: 80px solid rgba(128, 128, 128, 0.356);
     border-left-color: transparent;
     border-right-color: transparent;
     border-bottom-color: transparent;
+    z-index: 1;
+    transform-origin: top;
+
+    animation: shadow-movement 5s linear infinite;
 }
 
 .sun {
     position: absolute;
     top: 50px;
     left: 100px;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background-color: rgb(253, 196, 7);
     transform-origin: 100% 500%;
-    animation: sun-rise-set 4s linear infinite;
-    /* Try cubic-bezier(.4,0,.49,1) here */
+    animation: sun-rise-set 5s linear infinite;
 }
 
 @keyframes sun-rise-set {
@@ -127,5 +130,17 @@ html, body {
     75%, 100% {
         border-left-color: rgb(251, 245, 229);
         border-bottom-color: rgb(251, 245, 229);
+    }
+}
+
+@keyframes shadow-movement {
+    0% {
+        transform: translate(-50%, 55%) scaleY(0.4) skew(100deg);
+    }
+    50% {
+        transform: translate(-50%, 55%) scaleY(0.2) skew(0deg);
+    }
+    100% {
+        transform: translate(-50%, 55%) scaleY(0.4) skew(-100deg);
     }
 }
