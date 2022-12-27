@@ -12,9 +12,27 @@
             box-sizing: border-box;
         }
 
+        body {
+            background-color: rgb(56, 56, 56);
+        }
+
+        .wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: goldenrod;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
         .loader {
-            width: 5px;
-            height: 5px;
+            width: 4px;
+            height: 4px;
             margin: 20px auto;
             border-radius: 50%;
             animation: bubbling 2s linear infinite;
@@ -25,21 +43,23 @@
                 box-shadow: -21px 0 0 1px, -7px 0 0 1px, 7px 0 0 1px, 21px 0 0 1px;
             }
             20% {
-                box-shadow: -21px 0 0 2px, -7px 0 0 1px, 7px 0 0 1px, 21px 0 0 1px;
+                box-shadow: -21px 0 0 3px, -7px 0 0 1px, 7px 0 0 1px, 21px 0 0 1px;
             }
             40% {
-                box-shadow: -21px 0 0 1px, -7px 0 0 2px, 7px 0 0 1px, 21px 0 0 1px;
+                box-shadow: -21px 0 0 1px, -7px 0 0 3px, 7px 0 0 1px, 21px 0 0 1px;
             }
             60% {
-                box-shadow: -21px 0 0 1px, -7px 0 0 1px, 7px 0 0 2px, 21px 0 0 1px;
+                box-shadow: -21px 0 0 1px, -7px 0 0 1px, 7px 0 0 3px, 21px 0 0 1px;
             }
             80% {
-                box-shadow: -21px 0 0 1px, -7px 0 0 1px, 7px 0 0 1px, 21px 0 0 2px;
+                box-shadow: -21px 0 0 1px, -7px 0 0 1px, 7px 0 0 1px, 21px 0 0 3px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="loader"></div>
+    <div class="wrapper">
+        <div class="loader"></div>
+    </div>
 </body>
 </html>
