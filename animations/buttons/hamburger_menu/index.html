@@ -13,5 +13,12 @@
         <div class="bar"></div>
         <div class="bar"></div>
     </button>
+    <script>
+        const button = document.getElementsByClassName('burger-menu')[0];
+        button.addEventListener('click', (event) => {
+            // console.log('clicking', event, event.target)
+            button.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>

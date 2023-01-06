@@ -21,21 +21,25 @@ body {
     width: 30px;
     height: 4px;
     background-color: black;
-    transition: transform 1s;
+    opacity: 1;
+    transition: transform 1s, opacity 0.5s;
+    transform-origin: left;
+    border-radius: 2px;
 }
 
 .open .bar:nth-child(1) {
-    transform: rotate(-45deg);
-    /* animation: first-bar 1s; */
+    transform: rotate(45deg);
+    /* animation: first-bar 1s forwards; */
 }
 
 .open .bar:nth-child(2) {
-    animation: second-bar 1s;
+    opacity: 0;
+    /* animation: second-bar 1s forwards; */
 }
 
 .open .bar:nth-child(3) {
-    transform: rotate(45deg);
-    animation: third-bar 1s;
+    transform: translateY(5.5px) rotate(-45deg);
+    /* animation: third-bar 1s both running; */
 }
 
 /* @keyframes first-bar {
@@ -44,7 +48,7 @@ body {
     }
 
     100% {
-        transform: rotate(-45deg);
+        transform: rotate(45deg);
     }
 }
 
@@ -54,6 +58,6 @@ body {
     }
 
     100% {
-        transform: rotate(45deg);
+        transform: rotate(-45deg);
     }
 } */
