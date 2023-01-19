@@ -22,7 +22,7 @@ body {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background-color: rgb(232, 230, 230);
+    background-color: rgb(201, 238, 253);
     position: relative;
     overflow: hidden;
 }
@@ -31,30 +31,91 @@ body {
     position: absolute;
     bottom: 25%;
     left: calc(50% - 10px);
-    background-color: rgb(4, 197, 4);
+    background-image: linear-gradient(to right, rgb(1, 152, 1), rgb(4, 197, 4));
     width: 5px;
     height: 100px;
     border-radius: 50%;
+    animation: plant-motion 5s infinite linear;
+    transform-origin: bottom;
 }
 
-.plant::before {
+.leaf-left {
     position: absolute;
-    left: 50%;
+    left: -42px;
+    top: 10px;
+    content: '';
+    width: 40px;
+    height: 20px;
+    background-image: linear-gradient(rgb(2, 127, 2), rgb(6, 171, 6));
+    animation: left-leaf-motion 5s linear infinite;
+    transform-origin: right;
+    transform: rotate(20deg);
+    border-radius: 100px 70px 70px 100px/ 40px 40px 40px 40px;
+}
+
+.leaf-left::after {
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    content: '';
+    width: 6px;
+    height: 2px;
+    transform-origin: left;
+    transform: rotate(20deg);
+    background-color: rgba(6, 171, 6, 0.977);
+}
+
+.leaf-right {
+    position: absolute;
+    left: 6px;
+    top: 10px;
     content: '';
     width: 80px;
     height: 40px;
-    background-color: rgb(6, 171, 6);
-    animation: leaf-motion 5s linear infinite;
+    background-image: linear-gradient(rgb(2, 127, 2), rgb(6, 171, 6));
+    animation: right-leaf-motion 5s linear infinite;
     transform-origin: left;
 }
 
-@keyframes leaf-motion {
+.leaf-right::before {
+    position: absolute;
+    left: -4px;
+    top: 25px;
+    content: '';
+    width: 8px;
+    height: 3px;
+    transform: rotate(-45deg);
+    transform-origin: left;
+    background-color: rgba(6, 171, 6, 0.977);
+}
+
+@keyframes plant-motion {
+    0%, 20%, 45%, 80%, 100% {
+        transform: rotate(0deg);
+    }
+    34%, 55% {
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes left-leaf-motion {
+    0%, 20%, 45%, 80%, 100% {
+        transform: rotate(20deg) scale(1, 1) skewY(-5deg) skewX(0deg);
+        border-radius: 100px 70px 70px 100px/ 40px 40px 40px 40px;
+    }
+    34%, 55% {
+        transform: rotate(25deg) translateX(2px) scale(0.95, 0.9) skewY(10deg) skewX(20deg);
+        border-radius: 110px 70px 70px 100px/ 40px 40px 50px 40px;
+    }
+}
+
+@keyframes right-leaf-motion {
     0%, 25%, 50%, 75%, 100% {
-        transform: rotate(0deg) scale(1) skewY(-5deg);
+        transform: rotate(0deg) scale(1, 1) skewY(-5deg) skewX(0deg);
         border-radius: 70px 100px 100px 70px/ 40px 40px 40px 40px;
     }
     38%, 60% {
-        transform: rotate(-5deg) scale(0.95) skewY(10deg);
+        transform: rotate(-5deg) scale(0.95, 0.9) skewY(10deg) skewX(-10deg);
         border-radius: 70px 100px 100px 70px/ 40px 40px 50px 40px;
     }
 }
