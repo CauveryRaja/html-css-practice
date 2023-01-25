@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    /* width: 100%;
+    height: 100%; */
+}
+
+body {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 169, 70);
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 1px solid gray;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    animation: circle-animation 1s linear forwards;
+
+    /* TODO: Create container for Circle & line */
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    /* transform: ; */
+    transform-origin: center;
+}
+
+@keyframes circle-animation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.horizontal-line {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 2px;
+    background-color: white;
+    animation: line-animation 1s 2s linear forwards;
+}
+
+@keyframes line-animation {
+    0% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(5);
+    }
+}
