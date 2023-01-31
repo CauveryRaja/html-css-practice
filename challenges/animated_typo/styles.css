@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --color: white;
+    --line-thickness: 5px;
+    --hr-line-width: 150px;
+    --bracket-height: 100px;
 }
 
 html, body {
@@ -24,12 +28,13 @@ body {
     height: 500px;
     background-color: rgb(250, 169, 70);
     overflow: auto;
+    padding: 20px;
 }
 
 .circle {
     width: 60px;
     height: 60px;
-    background-color: white;
+    background-color: var(--color);
     border-radius: 50%;
     animation: circle-animation 1s ease-in-out forwards;
 
@@ -54,45 +59,148 @@ body {
 .hl-line-left {
     position: absolute;
     top: 50%;
-    left: 50%;
-    width: 10px;
-    height: 3px;
-    background-color: white;
-    animation: line-animation-left 2s 1s linear forwards;
+    right: 50%;
+    width: var(--hr-line-width);
+    height: var(--line-thickness);
+    background-color: var(--color);
+    transform: scaleX(0);
+    animation: line 1s 0.8s ease-in-out, line-left 1s 0.8s ease-in-out;
     transform-origin: right;
-}
-
-@keyframes line-animation-left {
-    0% {
-        transform: scaleX(0) translateX(0);
-    }
-    50% {
-        transform: scaleX(5);
-    }
-    100% {
-        transform: scaleX(10) translateX(-100px);
-    }
 }
 
 .hl-line-right {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 10px;
-    height: 3px;
-    background-color: white;
-    animation: line-animation-right 2s 1s linear forwards;
+    width: var(--hr-line-width);
+    height: var(--line-thickness);
+    background-color: var(--color);
+    transform: scaleX(0);
+    animation: line 1s 0.8s ease-in-out, line-right 1s 0.8s ease-in-out;
     transform-origin: left;
 }
 
-@keyframes line-animation-right {
+@keyframes line {
     0% {
-        transform: scaleX(0) translateX(0);
+        transform: scaleX(0);
     }
     50% {
-        transform: scaleX(5);
+        transform: scaleX(1);
     }
     100% {
-        transform: scaleX(10) translateX(100px);
+        transform: scaleX(0);
     }
+}
+
+@keyframes line-left {
+    0%, 50% {
+        transform-origin: right;
+    }
+    51%, 100% {
+        transform-origin: left;
+    }
+}
+
+@keyframes line-right {
+    0%, 50% {
+        transform-origin: left;
+    }
+    51%, 100% {
+        transform-origin: right;
+    }
+}
+
+.bracket-left {
+    width: var(--line-thickness);
+    height: var(--bracket-height);
+    background-color: var(--color);
+    position: relative;
+    top: calc(50% - var(--bracket-height)/2);
+    left: calc(50% - var(--hr-line-width));
+    transform: scaleY(0);
+    animation: bracket 0.5s 1.6s ease-in-out forwards;
+}
+
+@keyframes bracket {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.bracket-left::before {
+    position: absolute;
+    top: 0;
+    content: '';
+    display: block;
+    width: 40px;
+    height: var(--line-thickness);
+    background-color: var(--color);
+    transform: scaleX(0);
+    animation: bracket-edge 0.5s 2s ease-in-out forwards;
+    transform-origin: left;
+}
+
+.bracket-left::after {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    display: block;
+    width: 40px;
+    height: var(--line-thickness);
+    background-color: var(--color);
+    transform: scaleX(0);
+    animation: bracket-edge 0.5s 2s ease-in-out forwards;
+    transform-origin: left;
+}
+
+@keyframes bracket-edge {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.bracket-right {
+    width: var(--line-thickness);
+    height: var(--bracket-height);
+    background-color: var(--color);
+    position: absolute;
+    top: calc(50% - var(--bracket-height)/2);
+    left: calc(50% + var(--hr-line-width));
+    transform: scaleY(0);
+    animation: bracket 0.5s 1.6s ease-in-out forwards;
+}
+
+.bracket-right::before {
+    /* Understand how this works, though parent is not relative */
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    display: block;
+    width: 40px;
+    height: var(--line-thickness);
+    background-color: var(--color);
+    transform: scaleX(0);
+    animation: bracket-edge 0.5s 2s ease-in-out forwards;
+    transform-origin: right;
+}
+
+.bracket-right::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: '';
+    display: block;
+    width: 40px;
+    height: var(--line-thickness);
+    background-color: var(--color);
+    transform: scaleX(0);
+    animation: bracket-edge 0.5s 2s ease-in-out forwards;
+    transform-origin: right;
 }
