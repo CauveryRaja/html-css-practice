@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    animation: fadeIn 2s;
+    position: absolute;
+    right: 200px;
+}
+
+.inner-box {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(200px, 200px);
+    }
+}
+
+@keyframes color-change {
+    0% {
+        background-color: red;
+    }
+    100% {
+        background-color: aqua;
+    }
+}
