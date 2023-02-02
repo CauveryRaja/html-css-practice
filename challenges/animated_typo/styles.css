@@ -20,6 +20,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--color);
 }
 
 .frame {
@@ -204,3 +206,31 @@ body {
     animation: bracket-edge 0.5s 2s ease-in-out forwards;
     transform-origin: right;
 }
+
+.main-heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: main-heading-scale 0.5s 1.6s ease-in-out forwards;
+}
+
+@keyframes main-heading-scale {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* .top-heading {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    font-size: 24px;
+    text-transform: uppercase;
+} */
