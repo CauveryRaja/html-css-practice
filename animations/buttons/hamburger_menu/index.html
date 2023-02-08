@@ -33,9 +33,24 @@
         </div>
     </div>
     <script>
-        const button = document.getElementsByClassName('burger-menu')[0];
-        button.addEventListener('click', (event) => {
-            button.classList.toggle('open');
+        // Doesn't work - event.target is different while clicking .bar
+
+        // const container = document.getElementsByClassName('container')[0];
+        // container.addEventListener('click', (event) => {
+        //     console.log('hello', container, event.target)
+        //     if(event.target.matches('.burger-menu')) {
+        //         console.log('hello', event.target)
+
+        //         event.target.classList.toggle('open');
+        //     }
+        // })
+
+
+        const buttons = document.getElementsByClassName('burger-menu');
+        Array.from(buttons).forEach(menu => {
+            menu.addEventListener('click', (event) => {
+                menu.classList.toggle('open');
+            });
         });
     </script>
 </body>
