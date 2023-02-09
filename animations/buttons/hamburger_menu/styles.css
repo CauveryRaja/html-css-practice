@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
     padding: 20px;
 }
 
@@ -93,14 +93,17 @@ body {
     50% {
         transform: translateY(9px);
     }
+    100% {
+        transform: translateY(9px) rotate(45deg);
+    }
 }
 
 @keyframes button2-bar2 {
     0% {
-        transform: opacity(1);
+        opacity: 1;
     }
-    50% {
-        transform: opacity(0);
+    100% {
+        opacity: 0;
     }
 }
 
@@ -110,5 +113,60 @@ body {
     }
     50% {
         transform: translateY(-9px);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+
+
+/* Hamburgee menu 3 */
+.box:nth-child(3) .burger-menu .bar {
+
+}
+
+.box:nth-child(3) .open .bar:nth-child(1) {
+    animation: button3-bar1 1s ease-in-out forwards;
+}
+
+.box:nth-child(3) .open .bar:nth-child(2) {
+    animation: button3-bar2 1s ease-in-out forwards;
+}
+
+.box:nth-child(3) .open .bar:nth-child(3) {
+    animation: button3-bar3 1s ease-in-out forwards;
+}
+
+@keyframes button3-bar1 {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(9px);
+    }
+    100% {
+        transform: translateY(9px) rotate(-45deg);
+    }
+}
+
+@keyframes button3-bar2 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes button3-bar3 {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-9px);
+    }
+    100% {
+        transform: translateY(-9px) rotate(-135deg);
     }
 }
