@@ -45,11 +45,19 @@
         //     }
         // })
 
-
         const buttons = document.getElementsByClassName('burger-menu');
         Array.from(buttons).forEach(menu => {
             menu.addEventListener('click', (event) => {
-                menu.classList.toggle('open');
+                // This is because some buttons have animations instead of transitions
+                if(menu.classList.contains('opened')) {
+                    menu.classList.replace('opened', 'closed')
+                }
+                else if(menu.classList.contains('closed')) {
+                    menu.classList.replace('closed', 'opened')
+                }
+                else {
+                    menu.classList.add('opened');
+                }
             });
         });
     </script>
