@@ -22,7 +22,8 @@ body {
 }
 
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -70,10 +71,6 @@ body {
 }
 
 /* Hamburgee menu 2 */
-.box:nth-child(2) .burger-menu .bar {
-
-}
-
 .box:nth-child(2) .opened .bar:nth-child(1) {
     animation: button2-bar1 1s ease-in-out forwards;
 }
@@ -254,4 +251,52 @@ body {
     100% {
         transform: translateY(0);
     }
+}
+
+/* Hamburgee menu 4 */
+.box:nth-child(4) .burger-menu .bar {
+    transition: transform 0.3s;
+}
+
+.box:nth-child(4) .opened .bar:nth-child(1) {
+    transform: translateY(9px);
+}
+
+.box:nth-child(4) .opened .bar:nth-child(3) {
+    transform: translateY(-9px);
+}
+
+/* Hamburgee menu 5 */
+.box:nth-child(5) .burger-menu .bar {
+    opacity: 1;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.box:nth-child(5) .opened .bar:nth-child(1) {
+    transform: translateX(-20px);
+    opacity: 0;
+}
+
+.box:nth-child(5) .opened .bar:nth-child(3) {
+    transform: translateX(20px);
+    opacity: 0;
+}
+
+/* Hamburgee menu 6 */
+.box:nth-child(6) .burger-menu .bar {
+    opacity: 1;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.box:nth-child(6) .opened .bar:nth-child(1) {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.box:nth-child(6) .opened .bar:nth-child(2) {
+}
+
+.box:nth-child(6) .opened .bar:nth-child(3) {
+    transform: translateY(20px);
+    opacity: 0;
 }
