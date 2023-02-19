@@ -19,6 +19,7 @@ body {
     align-items: center;
     gap: 60px;
     padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
