@@ -19,6 +19,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 100px;
+
+    padding: 20px;
 }
 
 .card {
@@ -27,6 +29,34 @@ body {
     height: 500px;
     border-radius: var(--card-border-radius);
     box-shadow: 0 4px 8px rgb(158, 158, 158);
+    overflow: hidden;
+}
+
+.card::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: lightgray;
+
+    transform-origin: center;
+
+    width: 500px;
+    height: 2px;
+    box-shadow: 0 0 4px 8px rgba(255, 255, 255, 0.4);
+    transform: translate(-350px, -100px) rotate(-45deg);
+    animation: glitter 1s ease-in-out forwards;
+}
+
+@keyframes glitter {
+    0% {
+        transform: translate(-350px, -100px) rotate(-45deg);
+    }
+    100% {
+        transform: translate(100px, 500px) rotate(-45deg);
+    }
 }
 
 .card--front {
@@ -76,7 +106,7 @@ body {
 }
 
 .card:hover > .card--front {
-    transform: translateY(-50%);
+    transform: translateY(-48%);
     box-shadow: 0 20px 15px 0px rgb(198, 198, 198);
 }
 
@@ -138,6 +168,10 @@ body {
 
 
 /* Product card 1 styles */
+.card:nth-child(1)::after {
+    animation: glitter 1s ease-in-out forwards;
+}
+
 .card:nth-child(1) .content--buy {
     background: linear-gradient(to bottom right, rgb(53, 53, 53) 0.5%, var(--content-theme-1));
 }
@@ -147,6 +181,10 @@ body {
 }
 
 /* Product card 2 styles */
+.card:nth-child(2)::after {
+    animation: glitter 1s 0.6s ease-in-out forwards;
+}
+
 .card:nth-child(2) .content--buy {
     background: linear-gradient(to bottom right, rgb(53, 53, 53) 0.5%, var(--content-theme-2));
 }
@@ -156,10 +194,20 @@ body {
 }
 
 /* Product card 3 styles */
+.card:nth-child(3)::after {
+    animation: glitter 1s 1.2s ease-in-out forwards;
+}
+
 .card:nth-child(3) .content--buy {
     background: linear-gradient(to bottom right, rgb(53, 53, 53) 0.5%, var(--content-theme-3));
 }
 
 .card:nth-child(3) .content--cart {
     color: var(--content-theme-3);
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        flex-direction: column;
+    }
 }
