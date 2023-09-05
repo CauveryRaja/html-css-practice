@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --body-bg: rgb(227, 248, 124);
+  --button-border: black;
+  --button-text: white;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--body-bg);
+  padding: 5%;
+}
+
+.group {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 16px;
+  background-color: transparent;
+  color: var(--button-border);
+  border: 1px solid var(--button-border);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 1s;
+}
+
+button:hover {
+  background-color: var(--button-border);
+  color: var(--button-text);
+}
+
+.border-effects {
+}
