@@ -5,6 +5,8 @@
   --body-bg: rgb(227, 248, 124);
   --button-border: black;
   --button-text: white;
+  --button-width: 180px;
+  --button-height: 60px;
 }
 
 html,
@@ -29,20 +31,80 @@ body {
 }
 
 button {
-  padding: 15px 30px;
   font-size: 16px;
+  /* padding: 15px 30px;
   background-color: transparent;
   color: var(--button-border);
   border: 1px solid var(--button-border);
   cursor: pointer;
   text-transform: uppercase;
-  transition: all 1s;
+  transition: all 1s; */
+  width: var(--button-width);
+  height: var(--button-height);
 }
 
-button:hover {
+/* button:hover {
   background-color: var(--button-border);
   color: var(--button-text);
+} */
+
+.glitter {
+  background: transparent;
+  border: unset;
+
+  position: relative;
 }
 
-.border-effects {
+.glitter span {
+}
+
+.glitter .border {
+  fill: none;
+  stroke-width: 1;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.bg-line {
+  stroke: rgb(180, 179, 179);
+}
+
+.highlight-line {
+  stroke: rgb(69, 69, 69);
+  stroke-dasharray: 50 430;
+  stroke-dashoffset: 186;
+  opacity: 0;
+}
+
+.glitter:hover .bg-line {
+  stroke: rgb(181, 181, 181);
+}
+
+.glitter:hover .highlight-line {
+  animation: shine 2s;
+}
+
+@keyframes shine {
+  0% {
+    opacity: 0;
+    stroke-dasharray: 50 430;
+    stroke-dashoffset: 186;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  70% {
+    stroke-dasharray: 50 430;
+    stroke-dashoffset: -244;
+  }
+
+  100% {
+    opacity: 1;
+    stroke-dasharray: 0 430;
+    stroke-dashoffset: -294;
+  }
 }
