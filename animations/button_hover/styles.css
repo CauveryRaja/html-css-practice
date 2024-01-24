@@ -2,8 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --body-bg: rgb(227, 248, 124);
-  --button-border: black;
+  --body-bg: rgb(222, 141, 247);
+  --button-border: rgba(218, 218, 218, 0.752);
+  --button-highlight: white;
   --button-text: white;
   --button-width: 180px;
   --button-height: 60px;
@@ -32,30 +33,17 @@ body {
 
 button {
   font-size: 16px;
-  /* padding: 15px 30px;
-  background-color: transparent;
-  color: var(--button-border);
-  border: 1px solid var(--button-border);
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: all 1s; */
+  color: var(--button-text);
   width: var(--button-width);
   height: var(--button-height);
 }
 
-/* button:hover {
-  background-color: var(--button-border);
-  color: var(--button-text);
-} */
-
 .glitter {
   background: transparent;
   border: unset;
+  transition: background 2s;
 
   position: relative;
-}
-
-.glitter span {
 }
 
 .glitter .border {
@@ -68,18 +56,18 @@ button {
 }
 
 .bg-line {
-  stroke: rgb(180, 179, 179);
+  stroke: var(--button-border);
 }
 
 .highlight-line {
-  stroke: rgb(69, 69, 69);
+  stroke: var(--button-highlight);
   stroke-dasharray: 50 430;
   stroke-dashoffset: 186;
   opacity: 0;
 }
 
-.glitter:hover .bg-line {
-  stroke: rgb(181, 181, 181);
+.glitter:hover {
+  background: rgba(107, 106, 106, 0.245);
 }
 
 .glitter:hover .highlight-line {
