@@ -6,12 +6,12 @@ class Card {
     this.position = position;
   }
 }
-const MAX_VISIBLE = 5;
+const MAX_VISIBLE = 6;
 let cardInFocus = 0;
 
-let allCards;
+let allCards = [];
 
-const renderCards = () => {
+const createCards = () => {
   // Set card position
   allCards = info.map((entry, index) => {
     let position;
@@ -29,9 +29,27 @@ const renderCards = () => {
   });
 };
 
+const renderCards = () => {
+  const carouselElm = document.getElementsByClassName("carousel")[0];
+
+  allCards.forEach((item) => {
+    if (item.position !== 0 && item.position === undefined) return;
+    const card = document.createElement("div");
+    const content = document.createElement("span");
+    content.textContent = item.data;
+    card.appendChild(content);
+
+    card.classList.add("card");
+    card.style.transform = `translateX(${item.position * 100}px)`;
+
+    carouselElm.appendChild(card);
+  });
+};
+
 const init = () => {
-  renderCards();
+  createCards();
   console.log("hello", allCards);
+  renderCards();
 };
 
 init();
