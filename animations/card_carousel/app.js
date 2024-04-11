@@ -41,6 +41,7 @@ const renderCards = () => {
 
     card.classList.add("card");
     card.style.transform = `translateX(${item.position * 100}px)`;
+    card.style.zIndex = Math.floor(MAX_VISIBLE/2) - Math.abs(item.position)
 
     carouselElm.appendChild(card);
   });
